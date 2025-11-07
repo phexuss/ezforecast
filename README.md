@@ -6,7 +6,7 @@ The project focuses on API usage, DOM updates, and basic UI interactions.
 
 
 ## ✅ Live Demo (Vercel)
- # https://ezforecast.vercel.app/
+  https://ezforecast.vercel.app/
 
 ---
 

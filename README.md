@@ -4,9 +4,9 @@ EzForecast is a simple and clean weather application built as an assignment for 
 [Roadmap.sh Weather App Project](https://roadmap.sh/projects/weather-app).  
 The project focuses on API usage, DOM updates, and basic UI interactions.
 
-<a href="https://ezforecast.vercel.app/" target="_blank" rel="noopener noreferrer">
-  ✅ Live Demo (Vercel)
-</a>
+
+## ✅ Live Demo (Vercel)
+ # https://ezforecast.vercel.app/
 
 ---
 

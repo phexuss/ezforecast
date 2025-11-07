@@ -1,7 +1,6 @@
 const apiKey = "707e8234b23b4d648dd82820250611"; // Get this key on https://www.weatherapi.com/my/
 
 const f5Days = document.getElementById("forecast5Days") as HTMLButtonElement;
-
 const wSearchBar = document.getElementById("searchBar") as HTMLDivElement;
 
 function detectLocation() {
@@ -29,6 +28,7 @@ function detectLocation() {
 function searchBarAnimation() {
 	const btn = document.getElementById("cityBtn") as HTMLDivElement;
 	const arrow = document.getElementById("arrow") as HTMLImageElement;
+
 	btn.addEventListener("click", () => {
 		arrow.classList.toggle("rotate-180");
 		wSearchBar.classList.toggle("opacity-0");
@@ -37,9 +37,7 @@ function searchBarAnimation() {
 
 function searchAction() {
 	const searchBtn = document.getElementById("searchBtn") as HTMLImageElement;
-	const searchInput = document.getElementById(
-		"searchInput"
-	) as HTMLInputElement;
+	const searchInput = document.getElementById("searchInput") as HTMLInputElement;
 
 	searchBtn.addEventListener("click", () => {
 		const city = searchInput.value.trim();
@@ -47,6 +45,7 @@ function searchAction() {
 			searchInput.placeholder = "Please enter something :)";
 			return;
 		}
+
 		f5Days.classList.remove("hidden");
 		fetchCity(city);
 	});
@@ -54,26 +53,17 @@ function searchAction() {
 
 async function fetchCity(cityName: string) {
 	const localTimeSpan = document.getElementById("localTime") as HTMLSpanElement;
-	const humidityNow = document.getElementById(
-		"humidityPercent"
-	) as HTMLSpanElement;
+	const humidityNow = document.getElementById("humidityPercent") as HTMLSpanElement;
 	const windSpeed = document.getElementById("windValue") as HTMLSpanElement;
-	const weatherImage = document.getElementById(
-		"weatherImage"
-	) as HTMLImageElement;
-	const weatherDegree = document.getElementById(
-		"weatherDegree"
-	) as HTMLSpanElement;
-	const nameOfCity = document.getElementById(
-		"cityName"
-	) as HTMLParagraphElement;
-	const weatherStatus = document.getElementById(
-		"weatherStatus"
-	) as HTMLSpanElement;
+	const weatherImage = document.getElementById("weatherImage") as HTMLImageElement;
+	const weatherDegree = document.getElementById("weatherDegree") as HTMLSpanElement;
+	const nameOfCity = document.getElementById("cityName") as HTMLParagraphElement;
+	const weatherStatus = document.getElementById("weatherStatus") as HTMLSpanElement;
 
 	try {
+		// ✅ FIXED: HTTPS ONLY!
 		const response = await fetch(
-			`http://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${cityName}&days=5&aqi=yes&alerts=no`
+			`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${cityName}&days=5&aqi=yes&alerts=no`
 		);
 
 		if (!response.ok) {
@@ -81,6 +71,7 @@ async function fetchCity(cityName: string) {
 		}
 
 		const body = await response.json();
+
 		const {
 			current: {
 				wind_kph,
@@ -131,20 +122,22 @@ async function fetchCity(cityName: string) {
 }
 
 function renderForecast(days: any[]) {
-	const container = document.getElementById(
-		"forecastContainer"
-	) as HTMLDivElement;
+	const container = document.getElementById("forecastContainer") as HTMLDivElement;
+
 	while (container.firstChild) {
 		container.removeChild(container.firstChild);
 	}
+
 	days.forEach(day => {
 		const card = document.createElement("div");
 		card.className = "flex flex-col items-center px-4 ";
 
-		card.innerHTML = `<p class="text-white text-sm">${day.date}</p>
+		card.innerHTML = `
+			<p class="text-white text-sm">${day.date}</p>
 			<img src="https:${day.icon}" alt="${day.text}" class="w-12 h-12 my-2" />
 			<p class="text-white text-md">${day.text}</p>
-			<p class="text-white text-sm">🌡 ${day.max}° / ${day.min}°</p>`;
+			<p class="text-white text-sm">🌡 ${day.max}° / ${day.min}°</p>
+		`;
 
 		container.appendChild(card);
 	});

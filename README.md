@@ -5,7 +5,7 @@ EzForecast is a simple and clean weather application built as an assignment for 
 The project focuses on API usage, DOM updates, and basic UI interactions.
 
 ✅ Live Demo (Vercel):  
-https://ezforecast.vercel.app/
+<a href="https://ezforecast.vercel.app/" target="_blank">https://ezforecast.vercel.app/</a>
 
 ---
 

@@ -61,7 +61,6 @@ async function fetchCity(cityName: string) {
 	const weatherStatus = document.getElementById("weatherStatus") as HTMLSpanElement;
 
 	try {
-		// ✅ FIXED: HTTPS ONLY!
 		const response = await fetch(
 			`https://api.weatherapi.com/v1/forecast.json?key=${apiKey}&q=${cityName}&days=5&aqi=yes&alerts=no`
 		);

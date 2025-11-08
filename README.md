@@ -37,7 +37,8 @@ The project focuses on API usage, DOM updates, and basic UI interactions.
 ## 📸 Screenshots
 
 ### ✅ Main Weather UI
-<img width="1920" height="1080" src="https://github.com/user-attachments/assets/5ea7cfea-58fe-4b9a-9b6a-d81533cbee82" />
+<img width="1920" height="1080" alt="image" src="https://github.com/user-attachments/assets/e020e93b-bdcf-4413-973b-97e0bb44d15c" />
+
 
 ### ✅ Search Panel
 <img width="699" height="193" alt="image" src="https://github.com/user-attachments/assets/e220203e-afbc-4da9-9eea-2d67c0c0e17f" />

@@ -7,7 +7,7 @@ interface GeoButtonProps {
 const GeoButton = ({ onCoordinatesReady }: GeoButtonProps) => {
 	const handleGeoLocate = () => {
 		if (!navigator.geolocation) {
-			toast.error("Ваш браузер не поддерживает геолокацию.");
+			toast.error("Your browser does not support geolocation.");
 			return;
 		}
 
@@ -17,7 +17,7 @@ const GeoButton = ({ onCoordinatesReady }: GeoButtonProps) => {
 			},
 			() => {
 				toast.error(
-					"Не удалось получить местоположение. Проверьте разрешения браузера."
+					"Unable to retrieve location. Check your browser permissions."
 				);
 			}
 		);

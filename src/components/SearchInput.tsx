@@ -1,4 +1,6 @@
 import axios from "axios";
+import toast from "react-hot-toast";
+
 import { useState } from "react";
 import type { SearchInputProps, WeatherResponse } from "../types.ts";
 import GeoButton from "./GeoButton.tsx";
@@ -23,6 +25,7 @@ const SearchInput = ({ status, setCityName, setWeather }: SearchInputProps) => {
 			);
 		} catch (error) {
 			console.error("Error occurred during geo search", error);
+			toast.error("Error occurred during geo search");
 		}
 	};
 
@@ -40,6 +43,7 @@ const SearchInput = ({ status, setCityName, setWeather }: SearchInputProps) => {
 			);
 		} catch (error) {
 			console.error("Error occured", error);
+			toast.error("Error occured");
 		}
 	};
 

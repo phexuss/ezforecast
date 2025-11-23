@@ -26,8 +26,8 @@ Just check out and test project here
 - **Axios for API requests**  
 - **Tailwind CSS for styling**  
 - **react-hot-toast for toast notifications**  
- 
-- **Bun & npm for package management**  
+- **Bun & npm for package management**
+- **Vite**
 
 ---
 

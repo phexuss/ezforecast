@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+	--color-realblack: #1a1a1a;
+	--color-main-gray: #444;
+	--font-inter: Inter, sans-serif;
+	--background-image-hero-image: url("https://wallpapercave.com/wp/wp9124580.jpg");
+}

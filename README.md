@@ -1,73 +1,51 @@
-# React + TypeScript + Vite
+# EzForecast 🌦️
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+EzForecast is a simple weather forecast application built with **React + TypeScript**.  
+It allows you to view current weather and a 3-day forecast for a selected city or based on your geolocation.  
 
-Currently, two official plugins are available:
+This project was inspired by [Weather App on Roadmap.sh](https://roadmap.sh/projects/weather-app) and uses modern React patterns like props, useState, and lifted state.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## Features ✨
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- 🔍 City search for weather  
+- 🌐 Geolocation-based forecast 
+- 🌡️ Display of temperature, humidity, wind speed, and weather icons  
+- 📅 3-day weather forecast  
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+---
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Technologies 🛠️
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+- **React + TypeScript**
+- **Axios for API requests**  
+- **Tailwind CSS for styling**  
+- **react-hot-toast for toast notifications**  
+ 
+- **Bun & npm for package management**  
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+---
+
+## Installation & Running ⚡
+
+Clone the repository and install dependencies:
+
+```bash
+git clone https://github.com/phexuss/ezforecast.git
+cd ezforecast
 ```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+# Install dependencies
 ```
+# Using Bun
+bun install
+# Or using npm
+npm install
+```
+# Start the development server
+```
+# Bun
+bun run dev
+# npm
+npm run dev

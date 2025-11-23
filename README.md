@@ -5,6 +5,9 @@ It allows you to view current weather and a 3-day forecast for a selected city o
 
 This project was inspired by [Weather App on Roadmap.sh](https://roadmap.sh/projects/weather-app) and uses modern React patterns like props, useState, and lifted state.
 
+Just check out and test project here 
+ https://ezforecast.vercel.app/
+
 ---
 
 ## Features ✨
